@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionsStrings")));
 builder.Services.AddControllersWithViews();
 
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,4 +30,16 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+
+// **Seed the Database**
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<AppDBContext>();
+    AppDbInitializer.Seed(app);
+}
+
+
 app.Run();
+
+

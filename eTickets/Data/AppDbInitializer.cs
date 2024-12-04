@@ -146,10 +146,10 @@ namespace eTickets.Data
                             name = "Scoob",
                             description = "This is Scoob movie description",
                             price = 39.50,
-                            imageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
+                            imageURL = "http://dotnethow.net/images/movies/movie-7.jpeg",
                             startDate = DateTime.Now.AddDays(-10),
                             endDate = DateTime.Now.AddDays(-2),
-                            cinemaId = 1,
+                            cinemaId = 3,
                             producerId = 3,
                             MovieCategory = enums.MovieCategory.Cartoon
                         },
@@ -162,67 +162,127 @@ namespace eTickets.Data
                             startDate = DateTime.Now.AddDays(-12),
                             endDate = DateTime.Now.AddDays(-5),
                             cinemaId = 1,
-                            producerId = 3,
+                            producerId = 2,
                             MovieCategory = enums.MovieCategory.Documentary
                         },
                         new Movie()
                         {
-                            name = "Scoob",
-                            description = "This is Scoob movie description",
+                            name = "Ghost",
+                            description = "This is Ghost movie description",
                             price = 39.50,
-                            imageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
-                            startDate = DateTime.Now.AddDays(-10),
-                            endDate = DateTime.Now.AddDays(-2),
-                            cinemaId = 1,
-                            producerId = 3,
-                            MovieCategory = enums.MovieCategory.Cartoon
+                            imageURL = "http://dotnethow.net/images/movies/movie-4.jpeg",
+                            startDate = DateTime.Now,
+                            endDate = DateTime.Now.AddDays(7),
+                            cinemaId = 4,
+                            producerId = 4,
+                            MovieCategory = enums.MovieCategory.Horror
                         },
                         new Movie()
                         {
-                            name = "Scoob",
-                            description = "This is Scoob movie description",
+                            name = "The Shawshank Redemption",
+                            description = "This is The Shawshank Redemption movie description",
                             price = 39.50,
                             imageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
-                            startDate = DateTime.Now.AddDays(-10),
-                            endDate = DateTime.Now.AddDays(-2),
-                            cinemaId = 1,
+                            startDate = DateTime.Now,
+                            endDate = DateTime.Now.AddDays(3),
+                            cinemaId = 2,
                             producerId = 3,
-                            MovieCategory = enums.MovieCategory.Cartoon
+                            MovieCategory = enums.MovieCategory.Action
                         },
                         new Movie()
                         {
-                            name = "Scoob",
-                            description = "This is Scoob movie description",
+                            name = "Life",
+                            description = "This is Life movie description",
                             price = 39.50,
-                            imageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
+                            imageURL = "http://dotnethow.net/images/movies/movie-3.jpeg",
                             startDate = DateTime.Now.AddDays(-10),
-                            endDate = DateTime.Now.AddDays(-2),
-                            cinemaId = 1,
+                            endDate = DateTime.Now.AddDays(10),
+                            cinemaId = 3,
                             producerId = 3,
                             MovieCategory = enums.MovieCategory.Cartoon
                         },new Movie()
                         {
-                            name = "Scoob",
-                            description = "This is Scoob movie description",
+                            name = "Cold Soles",
+                            description = "This is Cold Soles movie description",
                             price = 39.50,
-                            imageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
-                            startDate = DateTime.Now.AddDays(-10),
-                            endDate = DateTime.Now.AddDays(-2),
+                            imageURL = "http://dotnethow.net/images/movies/movie-8.jpeg",
+                            startDate = DateTime.Now.AddDays(3),
+                            endDate = DateTime.Now.AddDays(20),
                             cinemaId = 1,
-                            producerId = 3,
-                            MovieCategory = enums.MovieCategory.Cartoon
+                            producerId = 1,
+                            MovieCategory = enums.MovieCategory.Drama
                         }
 
 
                     });
-                        
-                
+                    context.SaveChanges();
+
                 }
 
                 //Actors & Movies
+                context.Actors_Movies.AddRange(new List<Actor_Movie>()
+                {
+                    new Actor_Movie()
+                    {
+                        actorId = 5,
+                        movieId = 2
+                    },
+                    new Actor_Movie()
+                    {
+                        actorId = 3,
+                        movieId = 2
+                    },
+                    new Actor_Movie()
+                    {
+                        actorId = 4,
+                        movieId = 2
+                    },
+                    new Actor_Movie()
+                    {
+                        actorId = 1,
+                        movieId = 3
+                    },
+                    new Actor_Movie()
+                    {
+                        actorId = 3,
+                        movieId = 3
+                    },
+                    new Actor_Movie()
+                    {
+                        actorId = 2,
+                        movieId = 4
+                    },
+                    new Actor_Movie()
+                    {
+                        actorId = 3,
+                        movieId = 4
+                    },
+                    new Actor_Movie()
+                    {
+                        actorId = 5,
+                        movieId = 4
+                    },
+                    new Actor_Movie()
+                    {
+                        actorId = 1,
+                        movieId = 5
+                    },
+                    new Actor_Movie()
+                    {
+                        actorId = 4,
+                        movieId = 5
+                    },
+                    new Actor_Movie()
+                    {
+                        actorId = 3,
+                        movieId = 5
+                    }
+
+                });
+                context.SaveChanges();
 
             }
-        
+
         }
 
     }
