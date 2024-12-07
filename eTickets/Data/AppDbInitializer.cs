@@ -49,7 +49,7 @@ namespace eTickets.Data
                             description = "This is the description of cinema 5"
                         },
                     });
-                    context.SaveChanges();
+                    
 
                 }
 
@@ -90,7 +90,7 @@ namespace eTickets.Data
                         },
 
                     });
-                    context.SaveChanges();
+                    
 
                 }
 
@@ -131,7 +131,7 @@ namespace eTickets.Data
                         },
 
                     });
-                    context.SaveChanges();
+                    
 
                 }
 
@@ -149,7 +149,7 @@ namespace eTickets.Data
                             imageURL = "http://dotnethow.net/images/movies/movie-7.jpeg",
                             startDate = DateTime.Now.AddDays(-10),
                             endDate = DateTime.Now.AddDays(-2),
-                            cinemaId = 3,
+                            cinemaId = 1,
                             producerId = 3,
                             MovieCategory = enums.MovieCategory.Cartoon
                         },
@@ -173,7 +173,7 @@ namespace eTickets.Data
                             imageURL = "http://dotnethow.net/images/movies/movie-4.jpeg",
                             startDate = DateTime.Now,
                             endDate = DateTime.Now.AddDays(7),
-                            cinemaId = 4,
+                            cinemaId = 1,
                             producerId = 4,
                             MovieCategory = enums.MovieCategory.Horror
                         },
@@ -185,7 +185,7 @@ namespace eTickets.Data
                             imageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
                             startDate = DateTime.Now,
                             endDate = DateTime.Now.AddDays(3),
-                            cinemaId = 2,
+                            cinemaId = 1,
                             producerId = 3,
                             MovieCategory = enums.MovieCategory.Action
                         },
@@ -197,7 +197,7 @@ namespace eTickets.Data
                             imageURL = "http://dotnethow.net/images/movies/movie-3.jpeg",
                             startDate = DateTime.Now.AddDays(-10),
                             endDate = DateTime.Now.AddDays(10),
-                            cinemaId = 3,
+                            cinemaId = 1,
                             producerId = 3,
                             MovieCategory = enums.MovieCategory.Cartoon
                         },new Movie()
@@ -215,7 +215,7 @@ namespace eTickets.Data
 
 
                     });
-                    context.SaveChanges();
+                   
 
                 }
 
@@ -225,7 +225,8 @@ namespace eTickets.Data
                     new Actor_Movie()
                     {
                         actorId = 5,
-                        movieId = 2
+                        movieId = 2,
+                        
                     },
                     new Actor_Movie()
                     {
@@ -278,11 +279,11 @@ namespace eTickets.Data
                         movieId = 5
                     }
 
-                });
+                }); ;
+
                 context.SaveChanges();
-
             }
-
+            
         }
 
     }
