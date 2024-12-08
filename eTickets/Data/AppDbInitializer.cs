@@ -222,62 +222,19 @@ namespace eTickets.Data
                 //Actors & Movies
                 context.Actors_Movies.AddRange(new List<Actor_Movie>()
                 {
-                    new Actor_Movie()
-                    {
-                        actorId = 5,
-                        movieId = 2,
+                    //new Actor_Movie()
+                    //{
+                    //    actorId = 5,
+                    //    movieId = 2,
                         
-                    },
-                    new Actor_Movie()
-                    {
-                        actorId = 3,
-                        movieId = 2
-                    },
-                    new Actor_Movie()
-                    {
-                        actorId = 4,
-                        movieId = 2
-                    },
-                    new Actor_Movie()
-                    {
-                        actorId = 1,
-                        movieId = 3
-                    },
-                    new Actor_Movie()
-                    {
-                        actorId = 3,
-                        movieId = 3
-                    },
-                    new Actor_Movie()
-                    {
-                        actorId = 2,
-                        movieId = 4
-                    },
-                    new Actor_Movie()
-                    {
-                        actorId = 3,
-                        movieId = 4
-                    },
-                    new Actor_Movie()
-                    {
-                        actorId = 5,
-                        movieId = 4
-                    },
-                    new Actor_Movie()
-                    {
-                        actorId = 1,
-                        movieId = 5
-                    },
-                    new Actor_Movie()
-                    {
-                        actorId = 4,
-                        movieId = 5
-                    },
-                    new Actor_Movie()
-                    {
-                        actorId = 3,
-                        movieId = 5
-                    }
+                    //},
+                   
+                    //new Actor_Movie()
+                    //{
+                    //    actorId = 5,
+                    //    movieId = 4
+                    //},
+                   
 
                 }); ;
 

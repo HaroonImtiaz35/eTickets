@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Actor>
+
+
+@{
+    ViewData["Title"] = "List of Actors";
+}
+
+
+<div class="row">
+    <div class="col-md offset-md-2">
+        <table>
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.profilePictureURL)</th>
+                    <th>@Html.DisplayNameFor(model => model.fullName)</th>
+                    <th>@Html.DisplayNameFor(model => model.bio)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="align-middle"> 
+                            <img class="rounded-circle" src="@item.profilePictureURL" alt="@item.fullName" style="max-width: 150px"/>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.fullName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.bio)
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a> |
+                            <a calss="btn btn-outline-info"><i class="bi bi-eye"></i>Details</a> |
+                            <a calss="btn btn-outline-danger"><i class="bi bi-trash"></i>Delete</a> |
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
